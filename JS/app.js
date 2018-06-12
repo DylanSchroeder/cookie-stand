@@ -11,12 +11,12 @@ var clarence = {
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
+  cookiesSold: function(){
+    for(var i = 0; i < hours.length; i++){
+      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+    }
+  },
 };
-//This is where I'm stuck, part 3 I think
-function  {
-  for(var i = 0; i < hours.length; i++) {
-  }
-}
 
 
 var lowden = {
@@ -24,9 +24,16 @@ var lowden = {
   maxCustomer: 24,
   avgCustomer: 1.2,
 
+  cookiesPerHour: [],
+
   getCustomersPerHour: function(){
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
+  },
+  cookiesSold: function(){
+    for(var i = 0; i < hours.length; i++){
+      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+    }
   },
 };
 
@@ -37,9 +44,16 @@ var stanwood = {
   maxCustomer: 38,
   avgCustomer: 3.7,
 
+  cookiesPerHour: [],
+
   getCustomersPerHour: function(){
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
+  },
+  cookiesSold: function(){
+    for(var i = 0; i < hours.length; i++){
+      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+    }
   },
 };
 
@@ -49,9 +63,16 @@ var mechanicsville = {
   maxCustomer: 38,
   avgCustomer: 2.3,
 
+  cookiesPerHour: [],
+
   getCustomersPerHour: function(){
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
+  },
+  cookiesSold: function(){
+    for(var i = 0; i < hours.length; i++){
+      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+    }
   },
 };
 
@@ -61,8 +82,15 @@ var tipton = {
   maxCustomer: 24,
   avgCustomer: 1.2,
 
+  cookiesPerHour: [],
+
   getCustomersPerHour: function(){
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
+  },
+  cookiesSold: function(){
+    for(var i = 0; i < hours.length; i++){
+      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+    }
   },
 };
