@@ -1,18 +1,23 @@
 'use strict';
-
-
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var clarence = {
   minCustomer: 23,
   maxCustomer: 65,
   avgCustomer: 6.3,
 
+  cookiesPerHour: [],
+
   getCustomersPerHour: function(){
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
-
 };
-clarence.getCustomersPerHour();
+//This is where I'm stuck, part 3 I think
+function  {
+  for(var i = 0; i < hours.length; i++) {
+  }
+}
+
 
 var lowden = {
   minCustomer: 3,
@@ -24,7 +29,7 @@ var lowden = {
 
   },
 };
-lowden.getCustomersPerHour();
+
 
 
 var stanwood = {
@@ -37,7 +42,7 @@ var stanwood = {
 
   },
 };
-stanwood.getCustomersPerHour();
+
 
 var mechanicsville = {
   minCustomer: 20,
@@ -49,7 +54,7 @@ var mechanicsville = {
 
   },
 };
-mechanicsville.getCustomersPerHour();
+
 
 var tipton = {
   minCustomer: 3,
@@ -61,4 +66,3 @@ var tipton = {
 
   },
 };
-tipton.getCustomersPerHour();
