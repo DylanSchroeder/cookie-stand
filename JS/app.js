@@ -105,58 +105,84 @@ clarence.calculateCookiesPerHour();
 var clarenceList = document.getElementById('clarence');
 var clarenceHead = document.getElementById('cHead');
 clarenceHead.textContent = clarence.name;
+var sumCookies = 0;
 for(var i = 0; i < clarence.cookiesPerHour.length; i++){
   var clarenceLi = document.createElement('li');
-
-  clarenceLi.textContent = clarence.cookiesPerHour[i];
+  sumCookies += clarence.cookiesPerHour[i];
+  clarenceLi.textContent = hours[i] + ': ' + clarence.cookiesPerHour[i] + ' cookies';
   clarenceList.appendChild(clarenceLi);
 
 }
+clarenceLi = document.createElement('li');
+clarenceLi.textContent = 'Total: ' + sumCookies;
+clarenceList.appendChild(clarenceLi);
+
 lowden.calculateCookiesPerHour();
 
 var lowdenList = document.getElementById('lowden');
 var lowdenHead = document.getElementById('lHead');
 lowdenHead.textContent = lowden.name;
+var sumCookies = 0;
 for(var i = 0; i < lowden.cookiesPerHour.length; i++){
   var lowdenLi = document.createElement('li');
-
-  lowdenLi.textContent = lowden.cookiesPerHour[i];
+  sumCookies += lowden.cookiesPerHour[i];
+  lowdenLi.textContent = hours[i] + ': ' + lowden.cookiesPerHour[i] + ' cookies';
   lowdenList.appendChild(lowdenLi);
 
 }
+lowdenLi = document.createElement('li');
+lowdenLi.textContent = 'Total: ' + sumCookies;
+lowdenList.appendChild(lowdenLi);
+
 stanwood.calculateCookiesPerHour();
 
 var stanwoodList = document.getElementById('stanwood');
 var stanwoodHead = document.getElementById('sHead');
 stanwoodHead.textContent = stanwood.name;
+var sumCookies = 0;
 for(var i = 0; i < stanwood.cookiesPerHour.length; i++){
   var stanwoodLi = document.createElement('li');
-
-  stanwoodLi.textContent = stanwood.cookiesPerHour[i];
+  sumCookies += stanwood.cookiesPerHour[i];
+  stanwoodLi.textContent = hours[i] + ': ' + stanwood.cookiesPerHour[i] + ' cookies';
   stanwoodList.appendChild(stanwoodLi);
 
 }
+stanwoodLi = document.createElement('li');
+stanwoodLi.textContent = 'Total: ' + sumCookies;
+stanwoodList.appendChild(stanwoodLi);
+
+
 mechanicsville.calculateCookiesPerHour();
 
 var mechanicsvilleList = document.getElementById('mechanicsville');
 var mechanicsvilleHead = document.getElementById('mHead');
 mechanicsvilleHead.textContent = mechanicsville.name;
+var sumCookies = 0;
 for(var i = 0; i < stanwood.cookiesPerHour.length; i++){
   var mechanicsvilleLi = document.createElement('li');
-
-  mechanicsvilleLi.textContent = mechanicsville.cookiesPerHour[i];
+  sumCookies += mechanicsville.cookiesPerHour[i];
+  mechanicsvilleLi.textContent = hours[i] + ': ' + mechanicsville.cookiesPerHour[i] + ' cookies';
   mechanicsvilleList.appendChild(mechanicsvilleLi);
 
 }
+mechanicsvilleLi = document.createElement('li');
+mechanicsvilleLi.textContent = 'Total: ' + sumCookies;
+mechanicsvilleList.appendChild(mechanicsvilleLi);
+
+
 tipton.calculateCookiesPerHour();
 
 var tiptonList = document.getElementById('tipton');
 var tiptonHead = document.getElementById('tHead');
 tiptonHead.textContent = tipton.name;
+var sumCookies = 0;
 for(var i = 0; i < tipton.cookiesPerHour.length; i++){
   var tiptonLi = document.createElement('li');
-
-  tiptonLi.textContent = tipton.cookiesPerHour[i];
+  sumCookies += tipton.cookiesPerHour[i];
+  tiptonLi.textContent = hours[i] + ': ' + tipton.cookiesPerHour[i] + ' cookies';
   tiptonList.appendChild(tiptonLi);
 
 }
+tiptonLi = document.createElement('li');
+tiptonLi.textContent = 'Total: ' + sumCookies;
+tiptonList.appendChild(tiptonLi);
