@@ -94,3 +94,6 @@ var tipton = {
     }
   },
 };
+
+var storeList = document.getElementById('stores');
+
