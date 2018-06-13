@@ -96,4 +96,7 @@ var tipton = {
 };
 
 var storeList = document.getElementById('stores');
+var lowdenLi = document.createElement('li');
 
+lowdenLi.textContent = 'test';
+storeList.appendChild(lowdenLi);
