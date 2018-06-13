@@ -1,6 +1,7 @@
 'use strict';
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var clarence = {
+  name: "Clarence",
   minCustomer: 23,
   maxCustomer: 65,
   avgCustomer: 6.3,
@@ -8,7 +9,7 @@ var clarence = {
   cookiesPerHour: [],
 
   getCustomersPerHour: function(){
-    return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
+    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
 
   },
   calculateCookiesPerHour: function(){
@@ -95,8 +96,15 @@ var tipton = {
   },
 };
 
-var storeList = document.getElementById('stores');
-var lowdenLi = document.createElement('li');
+clarence.calculateCookiesPerHour();
 
-lowdenLi.textContent = 'test';
-storeList.appendChild(lowdenLi);
+var clarenceList = document.getElementById('clarence');
+var clarenceHead = document.getElementById('cHead');
+clarenceHead.textContent = clarence.name;
+for(var i = 0; i < clarence.cookiesPerHour.length; i++){
+  var lowdenLi = document.createElement('li');
+
+  lowdenLi.textContent = clarence.cookiesPerHour[i];
+  clarenceList.appendChild(lowdenLi);
+
+}
