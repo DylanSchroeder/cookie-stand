@@ -11,9 +11,9 @@ var clarence = {
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
-  cookiesSold: function(){
+  calculateCookiesPerHour: function(){
     for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
     }
   },
 };
@@ -30,9 +30,9 @@ var lowden = {
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
-  cookiesSold: function(){
+  calculateCookiesPerHour: function(){
     for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
     }
   },
 };
@@ -50,9 +50,9 @@ var stanwood = {
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
-  cookiesSold: function(){
+  calculateCookiesPerHour: function(){
     for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
     }
   },
 };
@@ -69,9 +69,9 @@ var mechanicsville = {
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
-  cookiesSold: function(){
+  calculateCookiesPerHour: function(){
     for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
     }
   },
 };
@@ -88,9 +88,9 @@ var tipton = {
     return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
 
   },
-  cookiesSold: function(){
+  calculateCookiesPerHour: function(){
     for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHourArray[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
     }
   },
 };
