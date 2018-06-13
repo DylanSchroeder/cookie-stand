@@ -186,3 +186,24 @@ for(var i = 0; i < tipton.cookiesPerHour.length; i++){
 tiptonLi = document.createElement('li');
 tiptonLi.textContent = 'Total: ' + sumCookies;
 tiptonList.appendChild(tiptonLi);
+
+//start on contructor stuff
+function Shop (name, minCustomer, maxCustomer, avgCustomer){
+  this.name = name;
+  this.minCustomer = minCustomer;
+  this.maxCustomer = maxCustomer;
+  this.avgCustomer = avgCustomer;
+
+  //this.cookiesPerHour = cookiesPerHour [];
+}
+
+var clarence = new Shop('Clarence', 23, 65, 6.3);
+console.log(clarence);
+var lowden = new Shop('Lowden', 3, 24, 1.2);
+console.log(lowden);
+var stanwood = new Shop('Stanwood', 11, 38, 3.7);
+console.log(stanwood);
+var mechanicsville = new Shop('Mechanicsville', 20, 38, 2.3);
+console.log(mechanicsville);
+var tipton = new Shop('Tipton', 2, 16, 4.6);
+console.log(tipton);
