@@ -42,6 +42,7 @@ var lowden = {
 
 
 var stanwood = {
+  name: 'Stanwood',
   minCustomer: 11,
   maxCustomer: 38,
   avgCustomer: 3.7,
@@ -49,7 +50,7 @@ var stanwood = {
   cookiesPerHour: [],
 
   getCustomersPerHour: function(){
-    return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
+    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
 
   },
   calculateCookiesPerHour: function(){
@@ -61,6 +62,7 @@ var stanwood = {
 
 
 var mechanicsville = {
+  name: 'Mechanicsville',
   minCustomer: 20,
   maxCustomer: 38,
   avgCustomer: 2.3,
@@ -68,7 +70,7 @@ var mechanicsville = {
   cookiesPerHour: [],
 
   getCustomersPerHour: function(){
-    return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
+    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
 
   },
   calculateCookiesPerHour: function(){
@@ -80,6 +82,7 @@ var mechanicsville = {
 
 
 var tipton = {
+  name: 'Tipton',
   minCustomer: 3,
   maxCustomer: 24,
   avgCustomer: 1.2,
@@ -87,7 +90,7 @@ var tipton = {
   cookiesPerHour: [],
 
   getCustomersPerHour: function(){
-    return this.minCustomer + Math.random * (this.maxCustomer - this.minCustomer);
+    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
 
   },
   calculateCookiesPerHour: function(){
@@ -119,5 +122,41 @@ for(var i = 0; i < lowden.cookiesPerHour.length; i++){
 
   lowdenLi.textContent = lowden.cookiesPerHour[i];
   lowdenList.appendChild(lowdenLi);
+
+}
+stanwood.calculateCookiesPerHour();
+
+var stanwoodList = document.getElementById('stanwood');
+var stanwoodHead = document.getElementById('sHead');
+stanwoodHead.textContent = stanwood.name;
+for(var i = 0; i < stanwood.cookiesPerHour.length; i++){
+  var stanwoodLi = document.createElement('li');
+
+  stanwoodLi.textContent = stanwood.cookiesPerHour[i];
+  stanwoodList.appendChild(stanwoodLi);
+
+}
+mechanicsville.calculateCookiesPerHour();
+
+var mechanicsvilleList = document.getElementById('mechanicsville');
+var mechanicsvilleHead = document.getElementById('mHead');
+mechanicsvilleHead.textContent = mechanicsville.name;
+for(var i = 0; i < stanwood.cookiesPerHour.length; i++){
+  var mechanicsvilleLi = document.createElement('li');
+
+  mechanicsvilleLi.textContent = mechanicsville.cookiesPerHour[i];
+  mechanicsvilleList.appendChild(mechanicsvilleLi);
+
+}
+tipton.calculateCookiesPerHour();
+
+var tiptonList = document.getElementById('tipton');
+var tiptonHead = document.getElementById('tHead');
+tiptonHead.textContent = tipton.name;
+for(var i = 0; i < tipton.cookiesPerHour.length; i++){
+  var tiptonLi = document.createElement('li');
+
+  tiptonLi.textContent = tipton.cookiesPerHour[i];
+  tiptonList.appendChild(tiptonLi);
 
 }
