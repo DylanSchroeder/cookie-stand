@@ -1,6 +1,7 @@
 'use strict';
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-var clarence = {
+//everything before clarence.calculate is commented
+/*var clarence = {
   name: 'Clarence',
   minCustomer: 23,
   maxCustomer: 65,
@@ -98,7 +99,40 @@ var tipton = {
       this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
     }
   },
+}; */
+function Shop (name, minCustomer, maxCustomer, avgCustomer){
+  this.name = name;
+  this.minCustomer = minCustomer;
+  this.maxCustomer = maxCustomer;
+  this.avgCustomer = avgCustomer;
+
+  this.cookiesPerHour = [];
+}
+
+Shop.prototype.getCustomersPerHour = function (){
+  return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
+
 };
+Shop.prototype.calculateCookiesPerHour = function(){
+  for(var i = 0; i < hours.length; i++){
+    this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+  }
+};
+
+var clarence = new Shop('Clarence', 23, 65, 6.3);
+console.log(clarence);
+
+var lowden = new Shop('Lowden', 3, 24, 1.2);
+console.log(lowden);
+
+var stanwood = new Shop('Stanwood', 11, 38, 3.7);
+console.log(stanwood);
+
+var mechanicsville = new Shop('Mechanicsville', 20, 38, 2.3);
+console.log(mechanicsville);
+
+var tipton = new Shop('Tipton', 2, 16, 4.6);
+console.log(tipton);
 
 clarence.calculateCookiesPerHour();
 
@@ -188,22 +222,36 @@ tiptonLi.textContent = 'Total: ' + sumCookies;
 tiptonList.appendChild(tiptonLi);
 
 //start on contructor stuff
-function Shop (name, minCustomer, maxCustomer, avgCustomer){
+/*function Shop (name, minCustomer, maxCustomer, avgCustomer){
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
   this.avgCustomer = avgCustomer;
 
-  //this.cookiesPerHour = cookiesPerHour [];
+  this.cookiesPerHour = [];
 }
+
+Shop.prototype.getCustomersPerHour = function (){
+  return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
+
+};
+Shop.prototype.calculateCookiesPerHour = function(){
+  for(var i = 0; i < hours.length; i++){
+    this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+  }
+};
 
 var clarence = new Shop('Clarence', 23, 65, 6.3);
 console.log(clarence);
+
 var lowden = new Shop('Lowden', 3, 24, 1.2);
 console.log(lowden);
+
 var stanwood = new Shop('Stanwood', 11, 38, 3.7);
 console.log(stanwood);
+
 var mechanicsville = new Shop('Mechanicsville', 20, 38, 2.3);
 console.log(mechanicsville);
+
 var tipton = new Shop('Tipton', 2, 16, 4.6);
-console.log(tipton);
+console.log(tipton); */
