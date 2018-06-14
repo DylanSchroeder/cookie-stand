@@ -1,6 +1,6 @@
 'use strict';
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
+//consructor
 function Shop (name, minCustomer, maxCustomer, avgCustomer){
   this.name = name;
   this.minCustomer = minCustomer;
@@ -36,7 +36,6 @@ var tipton = new Shop('Tipton', 2, 16, 4.6);
 console.log(tipton);
 
 //list stuff
-
 clarence.calculateCookiesPerHour();
 
 var clarenceList = document.getElementById('clarence');
@@ -125,6 +124,7 @@ tiptonLi.textContent = 'Total: ' + sumCookies;
 tiptonList.appendChild(tiptonLi);
 
 //form stuff
+
 function handleSubmit(event){
   event.preventDefault();
 
@@ -135,7 +135,6 @@ function handleSubmit(event){
 
   var newShop = new Shop( shop, minCustomer, maxCustomer, avgCustomer );
   console.log(newShop);
-
 }
 
 var form = document.querySelector('form');
