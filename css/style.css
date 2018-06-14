@@ -1,0 +1,18 @@
+body {
+  background-color: #F8AC8A;
+  font-family: 'Slabo 27px', serif; 
+}
+
+img {
+  border-radius: 50px;
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border-style: solid;
+  background: #F76C5E;
+}
+
+img.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
