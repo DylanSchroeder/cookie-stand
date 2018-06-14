@@ -1,104 +1,41 @@
 'use strict';
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-var clarence = {
-  name: 'Clarence',
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgCustomer: 6.3,
 
-  cookiesPerHour: [],
+function Shop (name, minCustomer, maxCustomer, avgCustomer){
+  this.name = name;
+  this.minCustomer = minCustomer;
+  this.maxCustomer = maxCustomer;
+  this.avgCustomer = avgCustomer;
 
-  getCustomersPerHour: function(){
-    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
+  this.cookiesPerHour = [];
+}
 
-  },
-  calculateCookiesPerHour: function(){
-    for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
-    }
-  },
+Shop.prototype.getCustomersPerHour = function (){
+  return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
+
+};
+Shop.prototype.calculateCookiesPerHour = function(){
+  for(var i = 0; i < hours.length; i++){
+    this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
+  }
 };
 
+var clarence = new Shop('Clarence', 23, 65, 6.3);
+console.log(clarence);
 
-var lowden = {
-  name: 'Lowden',
-  minCustomer: 3,
-  maxCustomer: 24,
-  avgCustomer: 1.2,
+var lowden = new Shop('Lowden', 3, 24, 1.2);
+console.log(lowden);
 
-  cookiesPerHour: [],
+var stanwood = new Shop('Stanwood', 11, 38, 3.7);
+console.log(stanwood);
 
-  getCustomersPerHour: function(){
-    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
+var mechanicsville = new Shop('Mechanicsville', 20, 38, 2.3);
+console.log(mechanicsville);
 
-  },
-  calculateCookiesPerHour: function(){
-    for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
-    }
-  },
-};
+var tipton = new Shop('Tipton', 2, 16, 4.6);
+console.log(tipton);
 
-
-
-var stanwood = {
-  name: 'Stanwood',
-  minCustomer: 11,
-  maxCustomer: 38,
-  avgCustomer: 3.7,
-
-  cookiesPerHour: [],
-
-  getCustomersPerHour: function(){
-    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
-
-  },
-  calculateCookiesPerHour: function(){
-    for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
-    }
-  },
-};
-
-
-var mechanicsville = {
-  name: 'Mechanicsville',
-  minCustomer: 20,
-  maxCustomer: 38,
-  avgCustomer: 2.3,
-
-  cookiesPerHour: [],
-
-  getCustomersPerHour: function(){
-    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
-
-  },
-  calculateCookiesPerHour: function(){
-    for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
-    }
-  },
-};
-
-
-var tipton = {
-  name: 'Tipton',
-  minCustomer: 3,
-  maxCustomer: 24,
-  avgCustomer: 1.2,
-
-  cookiesPerHour: [],
-
-  getCustomersPerHour: function(){
-    return this.minCustomer + Math.random() * (this.maxCustomer - this.minCustomer);
-
-  },
-  calculateCookiesPerHour: function(){
-    for(var i = 0; i < hours.length; i++){
-      this.cookiesPerHour[i]= Math.floor(this.getCustomersPerHour()*this.avgCustomer);
-    }
-  },
-};
+//list stuff
 
 clarence.calculateCookiesPerHour();
 
