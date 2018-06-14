@@ -123,3 +123,20 @@ for(var i = 0; i < tipton.cookiesPerHour.length; i++){
 tiptonLi = document.createElement('li');
 tiptonLi.textContent = 'Total: ' + sumCookies;
 tiptonList.appendChild(tiptonLi);
+
+//form stuff
+function handleSubmit(event){
+  event.preventDefault();
+
+  var shop = event.target.shop.value;
+  var minCustomer = event.target.minCustomer.value;
+  var maxCustomer = event.target.maxCustomer.value;
+  var avgCustomer = event.target.avgCustomer.value;
+
+  var newShop = new Shop( shop, minCustomer, maxCustomer, avgCustomer );
+  console.log(newShop);
+
+}
+
+var form = document.querySelector('form');
+form.addEventListener('submit', handleSubmit);
